@@ -1,0 +1,9 @@
+<div class="jumbotron container">
+  <h1 class="home-banner">Ask</h1>
+</div>
+
+<div class="container">
+  {{#each model as |question|}}
+    {{question-tile question=question}}
+  {{/each}}
+</div>

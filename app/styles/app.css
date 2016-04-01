@@ -1,0 +1,43 @@
+/*HEADER NAV-BAR*/
+
+.title-head {
+  float: left;
+  padding-right: 45px;
+}
+
+.head {
+  float: right;
+}
+
+.index-head {
+  color: #333;
+}
+
+.index-head:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.about-head {
+  color: #333;
+}
+
+.about-head:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+.contact-head {
+  color: #333;
+}
+
+.contact-head:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+/*INDEX PAGE*/
+
+.home-banner {
+  text-align: right;
+}

@@ -1,3 +1,10 @@
-<h2 id="title">Welcome to Ember</h2>
+<div class="container header">
+  <h4 class="title-head">Ask</h4>
+  <div class="header head">
+    {{#link-to 'index' class='index-head'}}Home{{/link-to}}
+    {{#link-to 'about' class='about-head'}}About Us{{/link-to}}
+    {{#link-to 'contact' class='contact-head'}}Contact Us{{/link-to}}
+  </div>
+</div>
 
 {{outlet}}
