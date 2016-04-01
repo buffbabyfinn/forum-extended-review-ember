@@ -6,11 +6,11 @@
   <h3>Questions:</h3>
   <ul class="question-list">
     {{#each model as |question|}}
-      {{question-tile question=question destroyQuestion="destroyQuestion"}}
+      {{question-tile question=question destroyQuestion="destroyQuestion" updateQuestion="updateQuestion"}}
     {{/each}}
   </ul>
 </div>
 
 <div class="container">
-  {{new-question save=save}}
+  {{new-question saveQuestion="saveQuestion"}}
 </div>

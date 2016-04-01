@@ -7,7 +7,7 @@
       <p class="view-notes"><strong>Notes: </strong>{{model.notes}}</p>
       <br>
       <br>
-      {{#each model as |question|}}
+      {{#each model.answer as |answer|}}
         <ul>
           <!-- {{#link-to 'answer' answer.id}} -->
             <li class="view-a-body">{{model.answer.body}}</li>
@@ -16,10 +16,10 @@
       {{/each}}
       <div class="container button-container">
         <button {{action 'delete' question}}>Delete Question</button>
-        {{new-question save=save}}
-        {{edit-question update=update}}
-        {{new-answer save=save}}
-        {{edit-answer update=update}}
+        {{new-question saveQuestion=saveQuestion}}
+        {{edit-question question=model updateQuestion="updateQuestion"}}
+        {{new-answer saveAnswer=saveAnswer}}
+        {{edit-answer updateAnswer=updateAnswer}}
       </div>
     </div>
   </div>

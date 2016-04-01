@@ -6,7 +6,7 @@ export default Ember.Component.extend({
     answerFormShow() {
       this.set('addNewAnswer', true);
     },
-    save() {
+    saveAnswer() {
       var params = {
         body: this.get('body'),
         author: this.get('author'),
