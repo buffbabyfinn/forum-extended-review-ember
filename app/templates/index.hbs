@@ -1,9 +1,16 @@
-<div class="jumbotron container">
-  <h1 class="home-banner">Ask</h1>
+<div class="jumbotron header">
+  <h1 class="banner">Ask</h1>
 </div>
 
 <div class="container">
-  {{#each model as |question|}}
-    {{question-tile question=question}}
-  {{/each}}
+  <h3>Questions:</h3>
+  <ul class="question-list">
+    {{#each model as |question|}}
+      {{question-tile question=question destroyQuestion="destroyQuestion"}}
+    {{/each}}
+  </ul>
+</div>
+
+<div class="container">
+  {{new-question save=save}}
 </div>
