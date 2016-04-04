@@ -1,5 +1,5 @@
 {{#if addNewQuestion}}
-  <div>
+  <div class="form-inline">
     <form>
       <div class="form-group">
         <label for="author">Author</label>
@@ -26,5 +26,5 @@
     </form>
   </div>
 {{else}}
-  <button  class="btn-lg btn-primary" {{action 'questionFormShow'}}>Ask a Question</button>
+  <button  class="btn btn-default" {{action 'questionFormShow'}}>Ask a Question</button>
 {{/if}}

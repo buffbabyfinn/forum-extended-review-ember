@@ -84,6 +84,13 @@ body {
   text-decoration: none;
 }
 
+.question-list h5 {
+  color: #333;
+}
+.question-list:hover {
+  text-decoration: none;
+}
+
 .question-tile
 
 /*ABOUT PAGE*/
