@@ -1,12 +1,12 @@
 <div class="jumbotron header">
-  <h1 class="banner">Ask</h1>
+  <h1 class="banner">Ask And Ye Shall Recieve (an Answer)</h1>
 </div>
 
-<div class="container">
+<div class="container-fluid">
   <h3>Questions:</h3>
   <ul class="question-list">
     {{#each model as |question|}}
-      {{question-tile question=question destroyQuestion="destroyQuestion" updateQuestion="updateQuestion"}}
+      {{question-tile question=question}}
     {{/each}}
   </ul>
 </div>

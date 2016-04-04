@@ -3,16 +3,29 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   model(params) {
     return Ember.RSVP.hash({
-    questions: this.store.findAll('question'),
-    answers: this.store.findAll('answer')
+      questions: this.store.findRecord('question', params.question_id),
+      answers: this.store.findAll('answer')
     });
   },
-
   actions: {
-    saveQuestion(params) {
-      var newQuestion = this.store.createRecord('question', params);
-      newQuestion.save();
+    deleteQuestion(question) {
+      var answer_deletions = question.get('answers').map(function(answer) {
+        return answer.destroyRecord();
+      });
+      Ember.RSVP.all(answer_deletions).then(function() {
+        return question.destroyRecord();
+      });
       this.transitionTo('index');
+    },
+
+    updateQuestion(question, params) {
+      Object.keys(params).forEach(function(key) {
+        if(params[key] !== undefined) {
+          question.set(key, params[key]);
+        }
+      });
+      question.save();
+      this.transitionTo('question');
     },
 
     saveAnswer(params) {
@@ -22,17 +35,25 @@ export default Ember.Route.extend({
       newAnswer.save().then(function() {
         return question.save();
       });
-      this.transitionTo('question', params.question);
+      this.transitionTo('question');
     },
 
-    deleteQuestion(question) {
-      if(confirm('Are you sure you would like to delete this question?')) {
-        this.sendAction('destroyQuestion', question);
-      }
+    updateAnswer(answer, params) {
+      Object.keys(params).forEach(function(key) {
+        if(params[key] !== undefined) {
+          answer.set(key, params[key]);
+        }
+      });
+      answer.save();
+      this.transitionTo('question');
     },
 
-    updateQuestion(question, params) {
-      this.sendAction('update', question, params);
+    deleteAnswer(answer) {
+      var question = answer.get('question');
+      answer.destroyRecord().then(function() {
+        question.save();
+      });
+      this.transitionTo('post');
     }
   }
 });

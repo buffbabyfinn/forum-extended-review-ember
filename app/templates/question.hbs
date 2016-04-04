@@ -1,26 +1,9 @@
-<div class="question-container container">
-  <div class="container view-question">
-    <div class="col-sm-6 col-sm-offset-3">
-      <p class="view-author"><strong>Author: </strong>{{model.author}}</p>
-      <br>
-      <h5 class="view-q-body">{{model.body}}</h5>
-      <p class="view-notes"><strong>Notes: </strong>{{model.notes}}</p>
-      <br>
-      <br>
-      {{#each model.answer as |answer|}}
-        <ul>
-          <!-- {{#link-to 'answer' answer.id}} -->
-            <li class="view-a-body">{{model.answer.body}}</li>
-          <!-- {{/link-to}} -->
-        </ul>
-      {{/each}}
-      <div class="container button-container">
-        <button {{action 'delete' question}}>Delete Question</button>
-        {{new-question saveQuestion=saveQuestion}}
-        {{edit-question question=model updateQuestion="updateQuestion"}}
-        {{new-answer saveAnswer=saveAnswer}}
-        {{edit-answer updateAnswer=updateAnswer}}
-      </div>
-    </div>
-  </div>
+<div class="container">
+{{question-detail question=model.questions deleteQuestion="deleteQuestion"}}
+
+{{update-question question=model.questions updateQuestion="updateQuestion"}}
+
+{{new-answer answer=model.answers question=model.questions saveAnswer="saveAnswer"}}
+
+{{answer-tile answer=model.answers question=model.questions updateAnswer="updateAnswer" deleteAnswer="deleteAnswer"}}
 </div>
