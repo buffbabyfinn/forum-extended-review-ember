@@ -1,45 +1,24 @@
 {
   "questions": [{
-    "body": "Why is the sky blue?",
     "author": "Tiny Child",
-    "notes": "",
-    "answers": ""
+    "title": "Wondering",
+    "body": "Why is the sky blue?",
+    "category": "Science",
+    "date": "1/14/2015",
+    "answers": []
   },{
-    "body": "How do butterflies work?",
     "author": "Some Body",
-    "notes": "",
-    "answers": ""
+    "title": "I saw something in nature...",
+    "body": "How do butterflies work?",
+    "category": "Magic",
+    "date": "7/04/2008",
+    "answers": []
   },{
-    "body": "How do magnets work?",
     "author": "Person McPersonpants",
-    "notes": "",
-    "answers": ""
-  },{
-    "body": "Why does everything suck all the time?",
-    "author": "A. Human",
-    "notes": "",
-    "answers": ""
-  },{
-    "body": "Why doesn't Jesus answer my prayers?",
-    "author": "Pastor Jr.",
-    "notes": "",
-    "answers": ""
-    }],
-  "answers": [{
-    "body": "Reflection of the sunlight off of air particles.",
-    "author": "Smarty McSmartburn",
-    "question": "Why is the sky blue?"
-  },{
-    "body": "By flapping their wings",
-    "author": "Somebody Else",
-    "question": "How do butterflies work?"
-  },{
-    "body": "You have depression",
-    "author": "PHDoctor of Everything",
-    "question": "Why does everything suck all the time?"
-  },{
-    "body": "It's a reflection of the blue water.",
-    "author": "Dumbo Pants",
-    "question": "Why is the sky blue?"
-    }]
+    "title": "I heard a song and it didn't do a good job explaining",
+    "body": "How do magnets work?",
+    "category": "Magic",
+    "date": "1/29/2016",
+    "answers": []
+  }]
 }
