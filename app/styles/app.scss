@@ -1,0 +1,139 @@
+body {
+  background-color: #F6F3FB;
+}
+
+/*JUMBOTRON*/
+
+.jumbotron {
+  background-color: #CAA7FE;
+}
+
+/*HEADER NAV-BAR*/
+
+.title-head {
+  float: left;
+  padding-right: 45px;
+}
+
+.head {
+  float: right;
+}
+
+.index-head {
+  color: #333;
+}
+.index-head:hover {
+  color: #333;
+  text-decoration: none;
+}
+.index-head:active {
+  text-decoration: none;
+}
+
+.about-head {
+  color: #333;
+}
+.about-head:hover {
+  color: #333;
+  text-decoration: none;
+}
+.about-head:active {
+  text-decoration: none;
+}
+
+.contact-head {
+  color: #333;
+}
+.contact-head:hover {
+  color: #333;
+  text-decoration: none;
+}
+.contact-head:active {
+  text-decoration: none;
+}
+
+/*PAGE HEADERS*/
+
+.banner {
+  text-align: right;
+  padding-right: 1em;
+}
+
+/*QUESTION TILE VIEW*/
+.view-question {
+  background-color: #EDE1FF;
+  width: 45em;
+  padding-top: 25px;
+  margin-top: 0px;
+  height: 1000px;
+}
+.view-author {
+
+}
+
+.view-a-body {
+  color: #333;
+}
+.view-a-body:hover {
+  color: #333;
+  text-decoration: none;
+}
+
+/*INDEX PAGE*/
+.question-list li {
+  text-decoration: none;
+}
+
+.question-list h5 {
+  color: #333;
+}
+.question-list:hover {
+  text-decoration: none;
+}
+
+.question-tile
+
+/*ABOUT PAGE*/
+
+.about {
+  background-color: #EDE1FF;
+  width: 45em;
+  padding-top: 25px;
+  margin-top: 0px;
+  height: 1000px;
+}
+
+.about-links {
+  float: right;
+  z-index: 0;
+}
+
+/*CONTACT PAGE*/
+
+.contact {
+  background-color: #EDE1FF;
+  width: 45em;
+  padding-top: 25px;
+  margin-top: 0px;
+  height: 1000px;
+}
+
+/*BUTTONS*/
+
+.new-button {
+
+}
+.new-button:hover {
+
+}
+
+.edit-button {
+
+}
+.edit-button:hover {
+
+}
+
+.button-container {
+  display: inline;
+}
