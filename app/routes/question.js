@@ -54,6 +54,22 @@ export default Ember.Route.extend({
         question.save();
       });
       this.transitionTo('post');
+    },
+
+    upvote(answerId) {
+      this.store.findRecord('answer', answerId).then(function(answer) {
+        answer.incrementProperty('rating');
+        answer.save();
+      });
+      this.refresh();
+    },
+
+    downvote(answerId) {
+      this.store.findRecord('answer', answerId).then(function(answer) {
+        answer.decrementProperty('rating');
+        answer.save();
+      });
+      this.refresh();
     }
   }
 });

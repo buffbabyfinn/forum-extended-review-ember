@@ -1,10 +1,15 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+
   updateAnswerForm: false,
   actions: {
     updateAnswerForm() {
       this.set('updateAnswerForm', true);
+    },
+
+    hideAnswerForm() {
+      this.set('updateAnswerForm', false);
     },
 
     updateAnswer(answer) {
@@ -21,6 +26,14 @@ export default Ember.Component.extend({
       if (confirm('Are you sure you want to delete this answer?')) {
         this.sendAction('deleteAnswer', answer);
       }
+    },
+
+    upvote(answerId) {
+      this.sendAction('upvote', answerId);
+    },
+
+    downvote(answerId) {
+      this.sendAction('downvote', answerId);
     }
   }
 });
