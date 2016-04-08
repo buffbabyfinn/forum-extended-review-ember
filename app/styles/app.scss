@@ -1,7 +1,9 @@
 $textColor: #333;
 $pageColor: #F6F3FB;
-$headerColor: #CAA7FE;
+$headerColor: #AF87DC;
 $interiorPageColor: #EDE1FF;
+$detailColor: #B8DE23;
+$hoverDetailColor: #94b31b;
 
 body {
   background-color: $pageColor;
@@ -14,46 +16,45 @@ body {
 }
 
 /*HEADER NAV-BAR*/
-.head {
-  float: right;
-}
-
 .index-head {
   color: $textColor;
-}
-.index-head:hover {
-  color: $textColor;
-  text-decoration: none;
-}
-.index-head:active {
-  text-decoration: none;
+  .index-head:hover {
+    color: $textColor;
+    text-decoration: none;
+  }
+  .index-head:active {
+    text-decoration: none;
+  }
 }
 
 .about-head {
   color: $textColor;
   padding-right: 2em;
-  .about-head:hover {
+  &:hover {
     color: $textColor;
     text-decoration: none;
   }
-  .about-head:active {
+  &:active {
     text-decoration: none;
   }
 }
 
 .contact-head {
   color: $textColor;
-  .contact-head:hover {
+  &:hover {
     color: $textColor;
     text-decoration: none;
   }
-  .contact-head:active {
+  &:active {
     text-decoration: none;
   }
 }
 
+.header-bar {
+  background-color: $detailColor;
+}
 .footer-bar {
-
+  background-color: $detailColor;
 }
 
 /*PAGE HEADERS*/
@@ -76,7 +77,7 @@ body {
 
 .view-a-body {
   color: $textColor;
-  .view-a-body:hover {
+  &:hover {
     color: $textColor;
     text-decoration: none;
   }
@@ -89,7 +90,7 @@ body {
 
 .question-list h5 {
   color: $textColor;
-  .question-list:hover {
+  &:hover {
     text-decoration: none;
   }
 }
@@ -120,22 +121,52 @@ body {
 }
 
 /*BUTTONS*/
-.new-button {
-
+.save-button {
+  background-color: $detailColor;
+  color: $textColor;
+  &:hover {
+    background-color: $hoverDetailColor !important;
+  }
 }
-.new-button:hover {
 
-}
+.cancel-button {
+  &:hover {
 
-.edit-button {
-
-}
-.edit-button:hover {
-
+  }
 }
 
 .button-container {
   display: inline;
 }
 
+.btn {
+  margin-top: .5em;
+  margin-bottom: .5em;
+  margin-left: .5em;
+}
+
 /*FORMS*/
+
+  /*ASK QUESTION*/
+
+  .ask-question-form {
+    font-size: 1em;
+  }
+
+  label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 100px;
+    text-align: right;
+  }
+  input {
+    display: inline-block;
+    float: left;
+    margin-bottom: 1em;
+  }
+  textarea {
+    display: inline-block;
+    float: left;
+    margin-bottom: 1em;
+  }

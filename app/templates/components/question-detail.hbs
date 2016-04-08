@@ -2,7 +2,7 @@
   <div class="col-sm-8">
 
     <h2>{{question.title}}</h2>
-    <h5>By {{question.author}}, <em>{{question.date}}</em></h5>
+    <h5>By {{question.author}}, <em>{{formatDate question.date}} at {{formatTime question.date}}</em></h5>
     <p>{{question.body}}</p>
     <p><em>Posted under <strong>{{question.category}}</strong></em></p>
 

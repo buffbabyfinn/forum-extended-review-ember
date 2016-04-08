@@ -7,6 +7,10 @@ export default Ember.Component.extend({
       this.set('addNewQuestion', true);
     },
 
+    hideQuestionForm() {
+      this.set('addNewQuestion', false);
+    },
+
     saveQuestion() {
       var params = {
         author: this.get('author') ? this.get('author'): "",
