@@ -1,29 +1,28 @@
+$textColor: #333;
+$pageColor: #F6F3FB;
+$headerColor: #CAA7FE;
+$interiorPageColor: #EDE1FF;
+
 body {
-  background-color: #F6F3FB;
+  background-color: $pageColor;
 }
 
 /*JUMBOTRON*/
-
 .jumbotron {
-  background-color: #CAA7FE;
+  background-color: $headerColor;
+  padding-left: 3em;
 }
 
 /*HEADER NAV-BAR*/
-
-.title-head {
-  float: left;
-  padding-right: 45px;
-}
-
 .head {
   float: right;
 }
 
 .index-head {
-  color: #333;
+  color: $textColor;
 }
 .index-head:hover {
-  color: #333;
+  color: $textColor;
   text-decoration: none;
 }
 .index-head:active {
@@ -31,29 +30,33 @@ body {
 }
 
 .about-head {
-  color: #333;
-}
-.about-head:hover {
-  color: #333;
-  text-decoration: none;
-}
-.about-head:active {
-  text-decoration: none;
+  color: $textColor;
+  padding-right: 2em;
+  .about-head:hover {
+    color: $textColor;
+    text-decoration: none;
+  }
+  .about-head:active {
+    text-decoration: none;
+  }
 }
 
 .contact-head {
-  color: #333;
+  color: $textColor;
+  .contact-head:hover {
+    color: $textColor;
+    text-decoration: none;
+  }
+  .contact-head:active {
+    text-decoration: none;
+  }
 }
-.contact-head:hover {
-  color: #333;
-  text-decoration: none;
-}
-.contact-head:active {
-  text-decoration: none;
+
+.footer-bar {
+
 }
 
 /*PAGE HEADERS*/
-
 .banner {
   text-align: right;
   padding-right: 1em;
@@ -61,7 +64,7 @@ body {
 
 /*QUESTION TILE VIEW*/
 .view-question {
-  background-color: #EDE1FF;
+  background-color: $interiorPageColor;
   width: 45em;
   padding-top: 25px;
   margin-top: 0px;
@@ -72,11 +75,11 @@ body {
 }
 
 .view-a-body {
-  color: #333;
-}
-.view-a-body:hover {
-  color: #333;
-  text-decoration: none;
+  color: $textColor;
+  .view-a-body:hover {
+    color: $textColor;
+    text-decoration: none;
+  }
 }
 
 /*INDEX PAGE*/
@@ -85,18 +88,17 @@ body {
 }
 
 .question-list h5 {
-  color: #333;
-}
-.question-list:hover {
-  text-decoration: none;
+  color: $textColor;
+  .question-list:hover {
+    text-decoration: none;
+  }
 }
 
 .question-tile
 
 /*ABOUT PAGE*/
-
 .about {
-  background-color: #EDE1FF;
+  background-color: $interiorPageColor;
   width: 45em;
   padding-top: 25px;
   margin-top: 0px;
@@ -109,9 +111,8 @@ body {
 }
 
 /*CONTACT PAGE*/
-
 .contact {
-  background-color: #EDE1FF;
+  background-color: $interiorPageColor;
   width: 45em;
   padding-top: 25px;
   margin-top: 0px;
@@ -119,7 +120,6 @@ body {
 }
 
 /*BUTTONS*/
-
 .new-button {
 
 }
@@ -137,3 +137,5 @@ body {
 .button-container {
   display: inline;
 }
+
+/*FORMS*/

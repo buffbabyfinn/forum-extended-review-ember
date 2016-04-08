@@ -1,10 +1,38 @@
-<div class="container-fluid header">
-  <h4 class="title-head">Ask</h4>
-  <div class="header head">
-    {{#link-to 'index' class='index-head'}}Home{{/link-to}}
-    {{#link-to 'about' class='about-head'}}About Us{{/link-to}}
-    {{#link-to 'contact' class='contact-head'}}Contact Us{{/link-to}}
+<header class = "jumbotron">
+  <div class="header">
+    <h1>Ask and Ye Shall Recieve</h1>
+    <h3><em>An answer.</em></h3>
+  </div>
+</header>
+<div class="navbar navbar-fixed-top" role="navigation">
+   <div class="container">
+     <div class="navbar-header">
+       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+         <span class="sr-only">Toggle navigation</span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+         <span class="icon-bar"></span>
+       </button>
+       <h4 class="nav-title">{{#link-to 'index' class="index-head"}}Ask{{/link-to}}</h4>
+     </div>
+     <div class="navbar-collapse collapse">
+       <ul class="nav navbar-nav navbar-right">
+           <!-- <li>{{#link-to 'cart-display' class="navlink"}}My Shopping Cart{{/link-to}}</li> -->
+           {{#link-to 'about' class="about-head"}}About{{/link-to}}
+           {{#link-to 'contact' class="contact-head"}}Contact{{/link-to}}
+       </ul>
+     </div>
+   </div>
+ </div>
+<div class="container">
+  {{outlet}}
+</div>
+<div class="navbar navbar-fixed-bottom footer-bar" role="navigation">
+  <div class="container">
+    <div class="text-center footer-link">
+      <div class="footer-text text-center container">
+       © 2016 Megan Fayer.
+      </div>
+    </div>
   </div>
 </div>
-
-{{outlet}}
