@@ -1,6 +1,6 @@
 <div class="container">
   {{#link-to 'question' question.id}}
-    <h5 class="question-list">{{question.author}} asks: {{question.title}}</h5>
+    <h5 class="question-list">{{fullQuestion}}</h5>
   {{/link-to}}
   <button class="btn btn-sm btn-default" {{action 'add' question}}>Bookmark</button>
 </div>

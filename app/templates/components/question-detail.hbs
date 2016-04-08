@@ -4,7 +4,7 @@
     <h2>{{question.title}}</h2>
     <h5>By {{question.author}}, <em>{{formatDate question.date}} at {{formatTime question.date}}</em></h5>
     <p>{{question.body}}</p>
-    <p><em>Posted under <strong>{{question.category}}</strong></em></p>
+    <p><em>Posted under <strong>{{question.category}}</strong></em>{{#link-to 'category' question.category}}{{question.category}}{{/link-to}}</p>
 
   </div>
   <div class="col-sm-1">
