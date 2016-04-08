@@ -2,7 +2,7 @@
   {{#each question.answers as |answer|}}
     <div class="row answer-tile">
       <div class="col-sm-2">
-        <h3>{{answer.rating}}</h3>
+        <h4>{{answer.rating}}</h4>
       </div>
       <div class="col-sm-2">
         <button type="button" class="btn btn-xs btn-default upvote-button" {{action 'upvote' answer.id}}>+</button>
@@ -14,7 +14,7 @@
         <p class="pull-right">at {{formatTime answer.date}} on {{formatDate answer.date}}</p>
       </div>
       <div class="col-sm-1">
-        <button type="button" class="btn btn-sm btn-danger pull-right" {{action 'deleteAnswer' answer}}>x</button>
+        <button type="button" class="btn btn-xs btn-danger pull-right" {{action 'deleteAnswer' answer}}>x</button>
       </div>
 
     {{#if updateAnswerForm}}

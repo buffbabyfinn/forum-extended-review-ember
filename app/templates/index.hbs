@@ -1,12 +1,16 @@
-<div class="container-fluid">
-  <h3>Questions:</h3>
-  <ul class="question-list">
-    {{#each model as |question|}}
-      {{question-tile question=question}}
-    {{/each}}
-  </ul>
-</div>
-
-<div class="container">
+<div class="container pull-left">
   {{new-question saveQuestion="saveQuestion"}}
+</div>
+<div class="row index-view">
+  <div class="container-fluid col-md-4">
+    <h3>Questions:</h3>
+    <ul class="question-list">
+      {{#each model as |question|}}
+        {{question-tile question=question}}
+      {{/each}}
+    </ul>
+  </div>
+  <div class="col-md-4 pull-right">
+    {{display-bookmarks}}
+  </div>
 </div>

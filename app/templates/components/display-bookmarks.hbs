@@ -1,0 +1,9 @@
+<h2 class="display-favorites">My Bookmarked Questions:</h2>
+<br>
+{{#each bookmarkQuestions.favorites as |favorite index|}}
+  <div class="bookmark-question">
+    <h4 class=bookmark-name>{{favorite.title}}</h4>
+    <p class="bookmark-body">{{favorite.body}}</p>
+    <!-- <button class="btn btn-xs btn-danger" {{action 'remove' index}}>Remove</button> -->
+  </div>
+{{/each}}
